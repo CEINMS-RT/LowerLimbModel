@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<execution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XSD/execution.xsd">
+  <NMSmodel>
+     <type>
+        <realTime>
+        	<openLoop/>
+        </realTime>
+     </type>
+
+     <tendon>
+          <stiff/>
+     </tendon>
+
+     <activation>
+          <exponential/>
+     </activation>
+  	 <curve>
+  		<online/>
+  	 </curve>
+  </NMSmodel>
+  
+  <ConsumerPlugin>
+	<EMGDevice>bin/Win/Debug/emg_0_plugins.dll</EMGDevice>
+	<EMGDeviceFile>cfg/LowerLimbModel/execution_cfg/executionEMG.xml</EMGDeviceFile>
+	<!-- <AngleDevice>plugin/RTOSIM_Plugin/lib/Debug/RTOSIMPlugin.dll</AngleDevice> -->
+	<AngleDevice>bin/Win/Debug/angle_0_plugins.dll</AngleDevice>
+	<AngleDeviceFile>cfg/LowerLimbModel/execution_cfg/executionIK_scale.xml</AngleDeviceFile>
+	<TorqueDevice/>
+	<TorqueDeviceFile/>
+  </ConsumerPlugin>
+  <NameOfSubject>gait2392</NameOfSubject>
+</execution>

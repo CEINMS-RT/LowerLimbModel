@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Laboratory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/LaboratoryExtended.xsd">
+  <Name>LOPESlab</Name>
+  <MotionCaptureSystem>Qualisys</MotionCaptureSystem>
+  <CoordinateSystemOrientation>XYZ</CoordinateSystemOrientation>
+  <NumberOfForcePlatforms>0</NumberOfForcePlatforms>
+  <ForcePlatformsList>
+    <ForcePlatform>
+      <ID>1</ID> <!--Force-plate Right -->
+      <Brand>Portable AMTI</Brand>
+      <Type>4</Type>
+      <FrameRate>1024</FrameRate>
+      <FPtoGlobalRotations>	
+		<Rot>
+          <Axis>Z</Axis>
+          <Degrees>90</Degrees>
+        </Rot>
+		<Rot>
+          <Axis>X</Axis>
+          <Degrees>270</Degrees>
+        </Rot>		
+      </FPtoGlobalRotations>
+	  <origin>
+      	<x>0.0</x>
+      	<y>0.0</y>
+      	<z>0.0</z>
+      </origin>
+	  <!--  Origine in the glabal referential (The four corners (x, y, z) / 4)   -->
+      <originGlobal> 
+      	<x>0.0</x>
+      	<y>0.0</y>
+      	<z>0.0</z>
+      </originGlobal>  
+    </ForcePlatform>
+    <ForcePlatform>
+      <ID>2</ID> <!--Force-plate Left -->
+      <Brand>Portable AMTI</Brand>
+      <Type>4</Type>
+      <FrameRate>1024</FrameRate>
+      <FPtoGlobalRotations>		
+		<Rot>
+          <Axis>Z</Axis>
+          <Degrees>90</Degrees>
+        </Rot>
+		<Rot>
+          <Axis>X</Axis>
+          <Degrees>270</Degrees>
+        </Rot>	 
+      </FPtoGlobalRotations>
+	  <origin>
+      	<x>0.0</x>
+      	<y>0.0</y>
+      	<z>0.0</z>
+      </origin>
+	  <!--  Origine in the glabal referential (The four corners (x, y, z) / 4)   -->
+      <originGlobal> 
+      	<x>0.0</x>
+      	<y>0.0</y>
+      	<z>0.0</z>
+      </originGlobal>
+    </ForcePlatform>
+  </ForcePlatformsList>
+  <ExternalForcesList>
+	<ExternalForce>
+	  <ID>r_hand</ID>
+	  <weight>7.5</weight>
+	  <heightThreshold>20</heightThreshold>
+	  <markerForThreshold>BOX1</markerForThreshold>
+	  <applyAtMarker>RF1</applyAtMarker>
+	</ExternalForce>  
+	<ExternalForce>
+	  <ID>l_hand</ID>
+	  <weight>7.5</weight>
+	  <heightThreshold>20</heightThreshold>
+	  <markerForThreshold>BOX1</markerForThreshold>
+	  <applyAtMarker>LF1</applyAtMarker>
+	</ExternalForce>  	
+  </ExternalForcesList>
+</Laboratory>

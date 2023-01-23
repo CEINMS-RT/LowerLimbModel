@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--executionIK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XSD/executionIK_ID_V2.xsd"-->
+<executionIK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XSD/executionIK_ID.xsd">
+	<ik>
+		<ikOption>
+			<numberOfThread>3</numberOfThread>
+			<enforceIKConstraintUse>true</enforceIKConstraintUse>
+			<kalman>
+				<kalmanOption>
+					<dt>0.02</dt>
+				</kalmanOption>
+			</kalman>
+		</ikOption>
+		<dataFrom>
+			<markers>
+	<!--	fs: 50 Hz fc:5 Hz order 2	-->
+				<lpFilterMarker>
+					<aCoeff>-1.1430    0.4128</aCoeff>
+					<bCoeff>0.0675    0.1349    0.0675</bCoeff>
+				</lpFilterMarker>
+				<maxError>0.005</maxError>
+				<markersList>
+					<marker>
+						<name>R1MT</name>
+						<weight>1</weight>
+					</marker>
+				</markersList>
+			</markers>
+		</dataFrom>
+	</ik>
+    <id>
+		<use>true</use>
+		<lpFilterGRF>
+		
+		<!--fs: 50 Hz fc 3 Hz order 2	-->
+			<aCoeff>-1.4755    0.5869</aCoeff>
+			<bCoeff>0.0279    0.0557    0.0279</bCoeff>
+		<!--fs: 50 Hz fc 0.5 Hz order 2-->
+			<!--aCoeff>-1.9112    0.9150</aCoeff>
+			<bCoeff>0.0009    0.0019    0.0009</bCoeff-->
+		</lpFilterGRF>
+		
+    	<plateForceBody> calcn_r calcn_l</plateForceBody>
+    </id>
+    <!--OsimFile>C:/Users/MoyaEstebanA/Documents/CEINMS-RT/cfg/Alejandro4.1/FINAL_noLegsFiles/LFB_RT_noKinConst_newROM_CEINMSmuscles_noLegs.osim</OsimFile--> <!--> LFB_SB1_minMarker_box_noKinConst or LFB_GRFtest or LFB_RT_noKinConst_newROM_CEINMSmuscles<-->
+    <OsimFile>cfg/LowerLimbModel/model/gait2392.osim</OsimFile> <!-- RT_scaled_noKnuckles_noKC or RT_scaled_01062022-->
+	<LabFile>>cfg/LowerLimbModel/execution_cfg/LopesLab_extended_noFP.xml</LabFile> <!--> WRlab_extended or LopesLab_extended <-->
+    <TranslateFile>cfg/LowerLimbModel/execution_cfg/gait2392_simbody_marker.txt</TranslateFile>
+    <ip>localhost</ip>
+    <port>22222</port>
+	<Fc>1</Fc>
+	<externalLoadsXml>cfg/LowerLimbModel/execution_cfg/ID_loadDefinition_handForces.xml</externalLoadsXml> <!--> ID_loadDefinition_handForces <-->
+	<ikTaskFilename>cfg/LowerLimbModel/execution_cfg/InverseKinematics_pelvisIK.xml</ikTaskFilename>
+</executionIK>
