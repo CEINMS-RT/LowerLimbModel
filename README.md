@@ -1,5 +1,12 @@
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1vHDQMUcbXRoh_hAcOvHvIXIQVk2dtlak3QBu-KU_PnGjMAwr6yHy9VdkSe04BuIF9_w&usqp=CAU" width=200>
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
+
 # LowerLimbModel
 Lower-limb model for CEINMS-RT
+<img src="https://github.com/CEINMS-RT/LowerLimbModel/blob/main/docs/source/image/upperLimbModel.png" width=200>
+
+
 
 This repo contains the lower limb model, testing data, as well configure files for CEINMS-RT.
 
