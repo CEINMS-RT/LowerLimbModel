@@ -21,6 +21,27 @@ Execution configure files are stored in the **execution_cfg** folder.
 
 * Run the CEINMS-RT command with the provided configure files.
 
+## What's inside:
+This lowerlimb CENIMS execution example contains 9 muscles at the right side of the leg, that span over the ankle, knee, and hip joints.
+
+These nine muscles are:
+_tib_ant_r; soleus_r; med_gas_r; lat_gas_r; rect_fem_r; vas_med_r; vas_int_r; vas_lat_r; bifemlh_r; semimem_r; bifemsh_r_
+
+In the example data folder, gait data of two walking speed (_3.6 & 4.5 km/h_) and one running speed (_8.1 km/h_) are provided.
+
+Calibrated subject-specific muscle parameters on these gait data trials are provided as well: **subjectCalibrated.xml**.  
+
 ## Citation
 
-
+```BibTeX
+@article{durandau2023Open,
+  title={Open source software: CEINMS},
+  author={Durandau, Guillaume, ...},
+  journal={--},
+  volume={--},
+  number={-},
+  pages={###--###},
+  year={####},
+  publisher={IEEE}
+}
+```
