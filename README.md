@@ -18,6 +18,8 @@ Execution configure files are stored in the **execution_cfg** folder.
 
 ## How to use:
 * Clone/download this repo and put it inside the CEINMS-RT **cfg** folder.
+* Copy the the folder of **SplineCoeff** into the cfg folder
+
 
 * Run the CEINMS-RT command with the provided configure files.
 
