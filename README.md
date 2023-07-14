@@ -33,7 +33,8 @@ _tib_ant_r; soleus_r; med_gas_r; lat_gas_r; rect_fem_r; vas_med_r; vas_int_r; va
 
 In the example data folder, gait data of two walking speed (_3.6 & 4.5 km/h_) and one running speed (_8.1 km/h_) are provided.
 
-Calibrated subject-specific muscle parameters on these gait data trials are provided as well: **subjectCalibrated.xml**.  
+Calibrated subject-specific muscle parameters on these gait data trials are provided as well: **SubjectCalibrated.xml** in data folder.
+As well as uncalibrated model: **gait2392_simbody_marker_ankle_knee_hip_r.xml** in data folder.
 
 ## Citation
 
