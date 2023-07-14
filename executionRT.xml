@@ -28,5 +28,5 @@
 	<TorqueDevice/>
 	<TorqueDeviceFile/>
   </ConsumerPlugin>
-  <NameOfSubject>gait2392</NameOfSubject>
+  <NameOfSubject>LowerLimbModel</NameOfSubject>
 </execution>

@@ -2,56 +2,37 @@
 <simulatedAnnealing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="../../XSD/simulatedAnnealing.xsd">
         
-	<EMGProccesing>cfg/LowerLimbModel/execution_cfg/executionEMG.xml</EMGProccesing>
-	<subjectXML>cfg/LowerLimbModel/data/subjectMTUCalibrated.xml</subjectXML>
-	<NameOfSubject>gait2392</NameOfSubject>
-	<dofToCalibrate>ankle_angle_r knee_angle_l hip_flexion_r</dofToCalibrate>
+	<EMGProccesing>cfg/LowerLimbModel/executionEMG.xml</EMGProccesing>
+	<osimFile>cfg/LowerLimbModel/model/gait2392.osim</osimFile>
+	<subjectXML>cfg/LowerLimbModel/data/gait2392_simbody_marker_ankle_knee_hip_r.xml</subjectXML>
+	<nameOfSubject>LowerLimbModel</nameOfSubject>
+	<dofsSpline>ankle_angle_r knee_angle_r hip_flexion_r</dofsSpline>
 	<computeSpline>
 		<use>false</use>
-		<osimFile>cfg/LowerLimbModel/model/gait2392.osim</osimFile>
-		<TranslateFile>cfg/LowerLimbModel/execution_cfg/gait2392_simbody_marker.txt</TranslateFile>
 		<printingOption>3</printingOption>
 		<numberOfNode>9</numberOfNode>
 	</computeSpline>
-	<preScaling>
-		<use>false</use>
-		<unscaledOsimFile>cfg/LowerLimbModel/model/gait2392.osim</unscaledOsimFile>
-		<osimFile>cfg/LowerLimbModel/model/gait2392.osim</osimFile>
-		<TranslateFile>cfg/LowerLimbModel/execution_cfg/gait2392_simbody_marker.txt</TranslateFile>
-	</preScaling>
 	<calibration>
-		<ObjectiveFunction>StrengthCoefficients_ShapeFactor_TendonSlackLength_single</ObjectiveFunction>
 		<use>true</use>
-		<filterEMG>false</filterEMG>
-		<dofCalibrationSequence>
-			<Dof>ankle_angle_r</Dof>
-		</dofCalibrationSequence>
+		<objectiveFunction>StrengthCoefficients_ShapeFactor_TendonSlackLength_single</objectiveFunction>
+		<EMD>0.1</EMD>
+		<dofToCalibrate>
+			<dofs>ankle_angle_r</dofs>
+		</dofToCalibrate>
 		<trials>
-			<directory>cfg/data</directory>
-			
-			<!--trial>
-				<trialName>walk36</trialName>
-				<cropMinTime>10</cropMinTime>
-				<cropMaxTime>15</cropMaxTime>
-			</trial-->
-			
+			<directory>cfg/LowerLimbModel/data/</directory>
 			<trial>
 				<trialName>walk36</trialName>
-				<cropMinTime>19</cropMinTime>
-				<cropMaxTime>24</cropMaxTime>
+				<cropMinTimeFromZero>19</cropMinTimeFromZero>
+				<cropMaxTimeFromZero>24</cropMaxTimeFromZero>
 			</trial>
-
-			<!--trial>
-				<trialName>run81</trialName>
-				<cropMinTime>28</cropMinTime>
-				<cropMaxTime>32</cropMaxTime>
-			</trial-->
-			
 		</trials>
 		<option>
 			<noEpsilon>2</noEpsilon>
 			<epsilon>1.E-3</epsilon>
 			<maxNoEval>100000</maxNoEval>
 		</option>
+		<inputSubjectXMLName>gait2392_simbody_marker_ankle_knee_hip_r.xml</inputSubjectXMLName>
+		<outputSubjectXMLName>SubjectCalibrated.xml</outputSubjectXMLName>
 	</calibration>
 </simulatedAnnealing>        

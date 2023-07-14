@@ -14,14 +14,16 @@ Osim model and testing data are from the subject 06 in a locomotion experiment: 
 
 Muscle moment arm splines are generated and stored at the folder of **SplineCoeff**.
 
-Execution configure files are stored in the **execution_cfg** folder. 
-
 ## How to use:
 * Clone/download this repo and put it inside the CEINMS-RT **cfg** folder.
 * Copy the the folder of **SplineCoeff** into the cfg folder
 
 
 * Run the CEINMS-RT command with the provided configure files.
+
+```
+.\bin\Win\Debug\CEINMS.exe -e .\cfg\LowerLimbModel\executionRT.xml -s .\cfg\LowerLimbModel\subjectMTU.xml -g
+```
 
 ## What's inside:
 This lowerlimb CENIMS execution example contains 9 muscles at the right side of the leg, that span over the ankle, knee, and hip joints.
@@ -36,14 +38,14 @@ Calibrated subject-specific muscle parameters on these gait data trials are prov
 ## Citation
 
 ```BibTeX
-@article{durandau2023Open,
-  title={Open source software: CEINMS},
-  author={Durandau, Guillaume, ...},
-  journal={--},
-  volume={--},
-  number={-},
-  pages={###--###},
-  year={####},
+@article{durandau2017robust,
+  title={Robust real-time musculoskeletal modeling driven by electromyograms},
+  author={Durandau, Guillaume and Farina, Dario and Sartori, Massimo},
+  journal={IEEE transactions on biomedical engineering},
+  volume={65},
+  number={3},
+  pages={556--564},
+  year={2017},
   publisher={IEEE}
 }
 ```
